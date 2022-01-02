@@ -29,30 +29,30 @@ dimensions = 480, 480
 for x in range(0, 50):
 
     # using ETH block number as starting random number seed
-    b=11981207
-    seed(x+b)
+    b = 11981207
+    seed(x + b)
 
-    #head color - randomly generate each number in an RGB color
+    # head color - randomly generate each number in an RGB color
     hd = (randint(0, 256), randint(0, 256), randint(0, 256))
-    c=randint(0,500)
+    c = randint(0, 500)
     seed(c)
 
-    #throat color - same as head color
+    # throat color - same as head color
     th = (randint(0, 256), randint(0, 256), randint(0, 256))
-    d = randint(0,1000)
+    d = randint(0, 1000)
     seed(d)
 
-    #eye "white" color
+    # eye "white" color
     # if random number between 1-1000 is 47 or less - Crazy Eyes!
     if d > 47:
         # normal eyes are always the same color
-        ew = (240,248,255)
+        ew = (240, 248, 255)
         ey = (0, 0, 0)
     else:
         # crazy eyes have the same (154, 0, 0) pupil and a random 'eye white' color
         ew = (randint(0, 256), randint(0, 256), randint(0, 256))
         ey = (154, 0, 0)
-    e = randint(0,1000)
+    e = randint(0, 1000)
     seed(e)
 
     # beak color
@@ -65,12 +65,12 @@ for x in range(0, 50):
         bk = (204, 172, 0)
     elif 47 >= f > 7:
         # 8 >> 47 >> red beak
-        bk = (204, 0, 0) 
+        bk = (204, 0, 0)
     else:
         # random number is 7 or less >> black beak
-        bk = (0, 0, 0) 
+        bk = (0, 0, 0)
 
-    # background color
+        # background color
     bg = (238, 238, 238)
     # outline color
     ol = (0, 0, 0)
@@ -212,7 +212,7 @@ for x in range(0, 50):
 
     # choose which bird image to use
     seed(f)
-    g = randint(0,1000)
+    g = randint(0, 1000)
     if g > 250:
         # if random number is 251 - 1000 >> basic bird
         pixels = basic_bird
